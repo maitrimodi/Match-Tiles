@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Match Tiles!</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        
+        <!--box layout was my previous design from tic-tactoe game which I built in joanna's class using HTML, CSS and animation
+        link:-"https://maitrimodi.github.io/tic-tac-toe/"-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="app" class="main-container">
+            <h1 class="title">Match Tiles!</h1>
+            <h2>Player {{player}}'s turn!</h2>
+            <div class="box zoom_in" v-on:click="show(image)" v-for="image in images">
+                <img
+                    v-if="image.show"
+                    class="image"
+                    :src="image.src"
+                />
+            </div>
+            <p class="result-flex">Player 1's score - {{score[1]}} <span class="right">Player 2's score - {{score[2]}}</span></p>
+
+            <!-- https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click/29884677
+            used this to reset the page -->
+            <button onclick="history.go(0);" class="button">Reset</button>
+        </div>
+        
+        
+               
+            <!-- <div class="table-flex">
+                <div id="b4" class="box zoom_in"></div>
+                <div id="b5" class="box zoom_in"></div>
+                <div id="b6" class="box zoom_in"></div>
+            </div>
+            <div class="table-flex">
+                <div id="b7" class="box zoom_in"></div>
+                <div id="b8" class="box zoom_in"></div>
+                <div id="b9" class="box zoom_in"></div>
+            </div> -->
+        
+        <div id="output" class="output-result"></div>
+    </body>
+    <script type="text/javascript" src="matchTiles.js"></script>
+</html>

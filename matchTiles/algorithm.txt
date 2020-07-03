@@ -1,0 +1,22 @@
+1 2 3 
+4 5 6
+7 8 9
+
+if x= 1 && x=2 || 4 line
+if x= 2 && x= 1 || 5 || 3 line
+if x= 3 && x=2 || 6 line
+if x=4 && x=1 || 5 || 7 line
+if x=5  && x=2 || 4 || 6 || 8 line
+if x=6 && x=3 || 5 || 9 line
+if x=7  && x=4 || 8 line
+if x=8 && x= 5 || 7 || 9 line
+if x=9 && x=6 || 8 line
+
+
+
+50 25picx x2
+randomly arrange
+2 players
+if 1st tile == 2nd tile 1 point to the player 
+if player gains point then next turn will be of same player till he loses
+player with max points will be winner
